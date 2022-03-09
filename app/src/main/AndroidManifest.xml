@@ -18,6 +18,9 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".NaverMapActivity"
+            android:exported="false" />
+        <activity
             android:name=".CameraActivity"
             android:exported="false" />
         <activity
@@ -36,14 +39,10 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".GPSActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -54,6 +53,13 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBg58qgWfhgGuIYhPwwvuMT1t6opBSio28" />
+        <meta-data
+            android:name="com.naver.maps.map.c1zxddrz23"
+            android:value="c1zxddrz23" />
     </application>
 
 </manifest>

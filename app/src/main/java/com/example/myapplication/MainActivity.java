@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv_pass = findViewById(R.id.tv_pass);
         Button btn_camera = findViewById(R.id.btn_camera);
         Button btn_gps = findViewById(R.id.btn_gps);
+        Button btn_googleMap = findViewById(R.id.btn_googleMap);
 
         // 카메라 버튼
         btn_camera.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent2);
                 }
         });
+
+        // google map 버튼
+        btn_googleMap.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                Intent intent3 = new Intent(MainActivity.this, GoogleMapActivity.class);
+                startActivity(intent3);
+            }
+        });
+
         Intent intent = getIntent();
         String userName = intent.getStringExtra("userName");
         String userID = intent.getStringExtra("userID");
